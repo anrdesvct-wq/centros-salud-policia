@@ -1,0 +1,759 @@
+[
+  {
+    "nombre": "Centro de Salud Tulcán",
+    "dir": "Guatemala y Manabí",
+    "provincia": "Carchi",
+    "coord": [
+      0.82454,
+      -77.706549
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Ibarra",
+    "dir": "Av. Jesús Yerovi y Juan Hernández",
+    "provincia": "Imbabura",
+    "coord": [
+      0.361706,
+      -78.120027
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–19h00"
+  },
+  {
+    "nombre": "Centro de Salud Esmeraldas",
+    "dir": "Jaime Hurtado y Simón Plata Torres",
+    "provincia": "Esmeraldas",
+    "coord": [
+      0.932307,
+      -79.664843
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Nueva Loja",
+    "dir": "Av. Colombia y Cementerio",
+    "provincia": "Sucumbíos",
+    "coord": [
+      0.09648525,
+      -76.87945845
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Tena",
+    "dir": "César Augusto Rueda y Federico Monteros",
+    "provincia": "Napo",
+    "coord": [
+      -0.998834,
+      -77.815911
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Orellana",
+    "dir": "Av. Alejandro Labaka km 3",
+    "provincia": "Orellana",
+    "coord": [
+      -0.4270625,
+      -76.9929375
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Ambato",
+    "dir": "Lérida y Madrid",
+    "provincia": "Tungurahua",
+    "coord": [
+      -1.25421435,
+      -78.63419537
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Medicina Familiar",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–19h00"
+  },
+  {
+    "nombre": "Centro de Salud Riobamba",
+    "dir": "Leopoldo Freire y La Paz",
+    "provincia": "Chimborazo",
+    "coord": [
+      -1.679792,
+      -78.640119
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–19h00"
+  },
+  {
+    "nombre": "Centro de Salud Latacunga",
+    "dir": "Gral. Proaño y Juan Abel Echeverría",
+    "provincia": "Cotopaxi",
+    "coord": [
+      -0.926149,
+      -78.605501
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Puyo",
+    "dir": "Km 2 1/2 vía a Macas",
+    "provincia": "Pastaza",
+    "coord": [
+      -1.5000566,
+      -77.9747366
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Portoviejo",
+    "dir": "Km 2 1/2 vía Crucita",
+    "provincia": "Manabí",
+    "coord": [
+      -1.0309516,
+      -80.4645566
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–19h00"
+  },
+  {
+    "nombre": "Centro de Salud Manta",
+    "dir": "Calle Alberto Cantos",
+    "provincia": "Manabí",
+    "coord": [
+      -0.960467,
+      -80.697018
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Chone",
+    "dir": "Vía Quito, sector Las Banderas",
+    "provincia": "Manabí",
+    "coord": [
+      -0.7028487,
+      -80.1325182
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–19h00"
+  },
+  {
+    "nombre": "Centro de Salud Santo Domingo",
+    "dir": "Av. Tsáchilas y Esmeraldas",
+    "provincia": "Santo Domingo de los Tsáchilas",
+    "coord": [
+      -0.239925,
+      -79.16886833
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Guaranda",
+    "dir": "Av. Guayaquil y Manabí",
+    "provincia": "Bolívar",
+    "coord": [
+      -1.58380713,
+      -78.99850373
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Milagro",
+    "dir": "Andrés Bello y Guaranda",
+    "provincia": "Guayas",
+    "coord": [
+      -2.13608873,
+      -79.58535174
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Puesto de Salud La Libertad",
+    "dir": "Calle 15 y Av. 33",
+    "provincia": "Santa Elena",
+    "coord": [
+      -2.240233,
+      -80.920279
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Babahoyo",
+    "dir": "General Barona y Olmedo",
+    "provincia": "Los Ríos",
+    "coord": [
+      -1.799244,
+      -79.536363
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Quevedo",
+    "dir": "Av. Quito frente al shopping",
+    "provincia": "Los Ríos",
+    "coord": [
+      -1.0109283,
+      -79.465715
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Puesto de Salud San Cristóbal",
+    "dir": "Av. Charles Darwin y Quito",
+    "provincia": "Galápagos",
+    "coord": [
+      -0.9064233,
+      -89.6021216
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Azogues",
+    "dir": "Ignacio Neira y A. Jaramillo",
+    "provincia": "Cañar",
+    "coord": [
+      -2.7451316,
+      -78.8491983
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Macas",
+    "dir": "Av. 29 de Mayo",
+    "provincia": "Morona Santiago",
+    "coord": [
+      -2.31756843,
+      -78.12916112
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Cuenca",
+    "dir": "Remigio Romero y H. Loyola",
+    "provincia": "Azuay",
+    "coord": [
+      -2.9021892,
+      -79.01227426
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Medicina Familiar",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Loja",
+    "dir": "Brasil entre Galápagos y Argentina",
+    "provincia": "Loja",
+    "coord": [
+      -4.00805167,
+      -79.20788928
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–19h00"
+  },
+  {
+    "nombre": "Centro de Salud Zamora",
+    "dir": "Av. del Maestro y F. Orellana",
+    "provincia": "Zamora Chinchipe",
+    "coord": [
+      -4.06674,
+      -78.953536
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Machala",
+    "dir": "9 de Mayo y M. Serrano",
+    "provincia": "El Oro",
+    "coord": [
+      -3.263245,
+      -79.963414
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Medicina Familiar",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Centro Guayaquil",
+    "dir": "Av. de las Américas",
+    "provincia": "Guayas",
+    "coord": [
+      -2.1772845,
+      -79.8923974
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–19h00"
+  },
+  {
+    "nombre": "Centro de Salud Sur Guayaquil",
+    "dir": "Chiriboga Parra y 15 Septiembre",
+    "provincia": "Guayas",
+    "coord": [
+      -2.2776361,
+      -79.8895082
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Pascuales",
+    "dir": "Km 14.5 vía Daule",
+    "provincia": "Guayas",
+    "coord": [
+      -2.08048856,
+      -79.95005436
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Eloy Alfaro",
+    "dir": "G. Moiner y Angamarca",
+    "provincia": "Pichincha",
+    "coord": [
+      -0.25829189,
+      -78.54822365
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Carapungo",
+    "dir": "Luis Vacari y Carihuayrazo",
+    "provincia": "Pichincha",
+    "coord": [
+      -0.095192,
+      -78.452687
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Laboratorio clínico Tipo Lac 1",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud La Delicia",
+    "dir": "Galo Plaza Lazo",
+    "provincia": "Pichincha",
+    "coord": [
+      -0.12651665,
+      -78.482413843
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Eugenio Espejo",
+    "dir": "Calixto y Mariana de Jesús",
+    "provincia": "Pichincha",
+    "coord": [
+      -0.1833,
+      -78.504898
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Manuelita Sáenz",
+    "dir": "Manabí y Montúfar",
+    "provincia": "Pichincha",
+    "coord": [
+      -0.219452,
+      -78.50732
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Quitumbe",
+    "dir": "Llirañan y Amaruñan",
+    "provincia": "Pichincha",
+    "coord": [
+      -0.29185287,
+      -78.54282782
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Salud Norte",
+    "dir": "Manuel C. Galarza y Alborada",
+    "provincia": "Pichincha",
+    "coord": [
+      -0.068803,
+      -78.47583
+    ],
+    "servicios": [
+      "Admisión",
+      "Medicina General",
+      "Odontología General",
+      "Psicología",
+      "Rehabilitación",
+      "Farmacia",
+      "Procedimientos generales",
+      "Servicios generales"
+    ],
+    "horario": "07h00–16h00"
+  },
+  {
+    "nombre": "Centro de Especialidades CIEC",
+    "dir": "H. de la Cruz y A. Ulloa",
+    "provincia": "Pichincha",
+    "coord": [
+      -0.1848657,
+      -78.4942136
+    ],
+    "servicios": [
+      "Ginecología",
+      "Dermatología",
+      "Traumatología",
+      "Oftalmología",
+      "Medicina Familiar",
+      "Pediatría",
+      "Farmacia",
+      "Rehabilitación Física",
+      "Rehabilitación de Lenguaje",
+      "Rehabilitación Ocupacional",
+      "Odontología General",
+      "Psicología General"
+    ],
+    "horario": "07h00–16h00"
+  }
+]
