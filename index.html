@@ -9,120 +9,67 @@
     :root {
       --header-h: 64px;
       --primary: #002B5B;
-      --vh: 1vh; /* JS sets this to innerHeight*0.01 for iOS fallback */
+      --vh: 1vh;
       --pad-top-safe: env(safe-area-inset-top, 0px);
     }
     * { box-sizing: border-box; }
     html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-      background: #f4f6f8;
-      overflow-x: hidden;
-      color: #0f172a;
-    }
-    header {
-      background: var(--primary);
-      color: #fff;
-      height: calc(var(--header-h) + var(--pad-top-safe));
-      padding-top: var(--pad-top-safe);
-      position: fixed; inset: 0 0 auto 0;
-      z-index: 5; display: none; align-items: center;
-    }
+    body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, sans-serif; background: #f4f6f8; overflow-x: hidden; color: #0f172a; }
+    header { background: var(--primary); color: #fff; height: calc(var(--header-h) + var(--pad-top-safe)); padding-top: var(--pad-top-safe); position: fixed; inset: 0 0 auto 0; z-index: 5; display: none; align-items: center; }
     .header-inner { width: 100%; display: flex; align-items: center; gap: 12px; padding: 0 12px; }
     #toggleBtn, .btn { display: inline-flex; align-items: center; gap: 8px; background: #0a2b56; color: #fff; border: 1px solid rgba(255,255,255,.15); border-radius: 10px; padding: 10px 12px; cursor: pointer; font-size: .98rem; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
     #toggleBtn:hover, .btn:hover { filter: brightness(1.05); }
     .header-title { flex: 1; text-align: center; font-weight: 600; font-size: 1.06rem; padding-right: 48px; }
     .header-actions { display: flex; gap: 8px; align-items: center; }
-
-    /* Map: prefer dynamic viewport units; fall back to --vh for iOS older */
     #map {
-      height: calc(100dvh - (var(--header-h) + var(--pad-top-safe)));
-      height: calc(100svh - (var(--header-h) + var(--pad-top-safe)));
-      height: calc((var(--vh, 1vh) * 100) - (var(--header-h) + var(--pad-top-safe)));
-      width: 100%; margin-top: calc(var(--header-h) + var(--pad-top-safe));
-      display: none; transition: width .3s;
+      height: calc(100dvh - (var(--header-h) + var(--pad-top-safe))); height: calc(100svh - (var(--header-h) + var(--pad-top-safe))); height: calc((var(--vh, 1vh) * 100) - (var(--header-h) + var(--pad-top-safe)));
+      width: 100%; margin-top: calc(var(--header-h) + var(--pad-top-safe)); display: none; transition: width .3s;
     }
-
-    /* Desktop side panel (left) */
-    #sidePanel {
-      position: fixed; top: calc(var(--header-h) + var(--pad-top-safe)); left: -360px;
-      width: 360px; height: calc(100dvh - (var(--header-h) + var(--pad-top-safe)));
-      height: calc(100svh - (var(--header-h) + var(--pad-top-safe)));
-      height: calc((var(--vh, 1vh)*100) - (var(--header-h) + var(--pad-top-safe)));
-      background: #ffffff; box-shadow: 2px 0 8px rgba(0,0,0,0.2);
-      padding: 1rem; overflow-y: auto; -webkit-overflow-scrolling: touch;
-      transition: left 0.3s ease; z-index: 12; display: none; flex-direction: column;
-    }
+    #sidePanel { position: fixed; top: calc(var(--header-h) + var(--pad-top-safe)); left: -360px; width: 360px; height: calc(100dvh - (var(--header-h) + var(--pad-top-safe))); height: calc(100svh - (var(--header-h) + var(--pad-top-safe))); height: calc((var(--vh, 1vh)*100) - (var(--header-h) + var(--pad-top-safe))); background: #ffffff; box-shadow: 2px 0 8px rgba(0,0,0,0.2); padding: 1rem; overflow-y: auto; -webkit-overflow-scrolling: touch; transition: left 0.3s ease; z-index: 12; display: none; flex-direction: column; }
     #sidePanel.visible { left: 0; }
     @media(min-width: 769px) { body.sidePanelOpen #map { width: calc(100% - 360px); margin-left: 360px; } }
-
-    /* Mobile bottom sheet */
     @media(max-width: 768px){
       #sidePanel {
         left: 0; right: 0; width: 100%;
-        top: auto; bottom: 0;
-        max-height: none;
-        height: 60dvh; height: 60svh; height: calc(var(--vh,1vh)*60);
-        border-radius: 14px 14px 0 0;
-        box-shadow: 0 -8px 24px rgba(0,0,0,.25);
-        padding: .75rem 1rem 1rem;
+        top: 0; bottom: 0;
+        height: calc(100dvh - 0px); height: calc(100svh - 0px); height: calc((var(--vh,1vh)*100));
+        border-radius: 0; box-shadow: none;
+        padding: calc(var(--pad-top-safe)) 1rem 1rem 1rem;
         transform: translateY(100%);
         transition: transform .28s ease-out;
-        display: flex;
+        display: flex; flex-direction: column;
+        z-index: 999;
       }
       #sidePanel.visible { transform: translateY(0%); }
-      #sheetHandle {
-        width: 44px; height: 5px; border-radius: 999px;
-        background:#cbd5e1; margin: 4px auto 10px;
-      }
-      .sheet-header {
-        display:flex; justify-content: space-between; align-items:center; margin-bottom:.25rem;
-      }
+      #sheetHandle { display:none; }
+      .sheet-header { padding-top: 8px; display:flex; justify-content: space-between; align-items: center; }
       .sheet-title { font-weight:600; font-size:1rem; }
       .sheet-close { background:none; border:none; font-size:1.2rem; padding:.25rem .5rem; }
+      #filters { margin-top: 8px; }
+      #centrosTable { flex: 1 1 auto; background:#fff; }
+      #backdrop { display:none !important; }
     }
-
     #filters { margin-bottom: 1rem; }
     #filters label { display: block; margin-bottom: 0.3rem; font-weight: 600; }
     #filters select, #filters input { width: 100%; padding: 8px; margin-bottom: 0.75rem; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.98rem; }
-
     table { width: 100%; border-collapse: collapse; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-radius: 10px; overflow: hidden; font-size: 0.92rem; background:#fff; }
     thead th { position: sticky; top: 0; background-color: #f1f3f5; z-index: 1; }
     th, td { padding: 10px; border-bottom: 1px solid #eee; text-align: left; }
     tr:hover { background-color: #f7fbff; cursor: pointer; }
     .fila-servicios { background-color: #fbfdff; }
+    tr.selected { background:#e6f0ff !important; outline: 2px solid #99baff; }
     .servicios-cell { font-size: 0.92em; padding: 0.7em 1em; }
     .chip { display: inline-block; padding: 4px 8px; margin: 3px; border-radius: 999px; background: #e8f0fe; color: #103f91; font-size: 0.82em; border: 1px solid #d6e2ff; }
-
-    @media(max-width: 768px) {
-      .header-inner{ gap:8px; }
-      .header-title{ font-size:1rem; padding-right:0; }
-      #toggleBtn span.txt, .btn span.txt { display: none; }
-      #toggleBtn, .btn { padding: 10px 12px; }
-      th, td { padding: 12px 10px; }
-    }
-
     #landing { position: fixed; inset: 0; background: linear-gradient(135deg, #001a37, var(--primary)); color: white; display: flex; justify-content: center; align-items: center; z-index: 1000; }
     .landing-content { text-align: center; }
     .landing-content h1 { font-size: 2.2rem; margin-bottom: 1rem; }
     .landing-content p { font-size: 1rem; margin-bottom: 1.2rem; opacity: 0.9; }
     .landing-content button { font-size: 1.05rem; padding: 0.7rem 1.6rem; background: white; color: #002B5B; border: none; border-radius: 12px; cursor: pointer; }
-
     .leaflet-container { background: #eef3f7; }
     .loc-pulse { width: 14px; height: 14px; border-radius: 50%; background: #2563eb; box-shadow: 0 0 0 rgba(37,99,235, 0.7); animation: pulse 1.5s infinite; border: 2px solid #fff; }
     @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,99,235, 0.7);} 70% { box-shadow: 0 0 0 12px rgba(37,99,235, 0);} 100% { box-shadow: 0 0 0 0 rgba(37,99,235, 0);} }
     .banner { position: fixed; top: calc(var(--header-h) + var(--pad-top-safe)); left: 0; right: 0; background: #fde68a; color: #7c2d12; padding: 8px 12px; font-size: .92rem; z-index: 20; display:none; }
     .banner.show{display:block;}
-
-    /* Backdrop for mobile sheet */
-    #backdrop {
-      position: fixed; inset: calc(var(--header-h) + var(--pad-top-safe)) 0 0 0;
-      background: rgba(0,0,0,.25); z-index: 11;
-      opacity: 0; pointer-events: none; transition: opacity .2s ease;
-      display: block;
-    }
-    #backdrop.show { opacity: 1; pointer-events: auto; }
     .no-scroll { overflow: hidden; }
   </style>
 </head>
@@ -146,10 +93,12 @@
   </header>
 
   <div id="sidePanel" aria-label="Panel con lista de centros y filtros">
-    <div id="sheetHandle"></div>
     <div class="sheet-header">
       <div class="sheet-title">Centros</div>
-      <button id="sheetClose" class="sheet-close" aria-label="Cerrar">✕</button>
+      <div>
+        <button id="sheetApply" class="btn" style="margin-right:8px;">Aplicar</button>
+        <button id="sheetClose" class="sheet-close" aria-label="Cerrar">✕</button>
+      </div>
     </div>
     <div id="filters">
       <label for="provincia">Filtrar por provincia:</label>
@@ -167,29 +116,21 @@
   </div>
 
   <div id="map"></div>
-  <div id="backdrop"></div>
   <div id="banner" class="banner"></div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
   (function(){
     let map, markers=[], markerLayer, centros=[], userLayer=null;
-    let firstFixDone = false;
-
-    // iOS/Safari viewport height fix
-    function setVhVar(){
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', vh + 'px');
-    }
-    setVhVar();
-    window.addEventListener('resize', setVhVar);
+    let selectedId = null; // persist selected center by nombre
+    function setVhVar(){ const vh = window.innerHeight * 0.01; document.documentElement.style.setProperty('--vh', vh + 'px'); }
+    setVhVar(); window.addEventListener('resize', setVhVar);
 
     async function loadCentros() {
       const res = await fetch('./data/centros.json', { cache: 'no-store' });
       if (!res.ok) throw new Error('HTTP '+res.status+' al cargar data/centros.json');
       centros = await res.json();
     }
-
     function initMap() {
       if (map && map.remove) { try { map.remove(); } catch(e){} map = null; }
       map = L.map('map', { zoomControl: true }).setView([-1.8312, -78.1834], 7);
@@ -197,7 +138,6 @@
       markerLayer = L.layerGroup().addTo(map);
       userLayer = L.layerGroup().addTo(map);
     }
-
     function renderMarkers(items) {
       markerLayer.clearLayers(); markers = [];
       items.forEach((c) => {
@@ -206,44 +146,37 @@
         m.addTo(markerLayer); markers.push(m);
       });
     }
-
     function renderTabla(items) {
       const tbody = document.getElementById("tablaCuerpo"); tbody.innerHTML = "";
       items.forEach((c, idx) => {
         const tr = document.createElement("tr");
         tr.tabIndex = 0; tr.setAttribute("role","button"); tr.setAttribute("aria-expanded","false");
+        if (selectedId === c.nombre) { tr.classList.add('selected'); }
         tr.innerHTML = `<td>${c.nombre}</td><td>${c.dir}</td><td><a href="https://www.google.com/maps/dir/?api=1&destination=${c.coord[0]},${c.coord[1]}" target="_blank" rel="noopener">Ruta</a></td>`;
-
-        const trServicios = document.createElement("tr");
-        trServicios.style.display = "none"; trServicios.classList.add("fila-servicios");
+        const trServicios = document.createElement("tr"); trServicios.style.display = "none"; trServicios.classList.add("fila-servicios");
         const tdServicios = document.createElement("td"); tdServicios.colSpan = 3; tdServicios.classList.add("servicios-cell"); trServicios.appendChild(tdServicios);
-
-        const toggleServicios = () => {
+        const toggleServicios = () => { selectedId = c.nombre;
           const abierto = trServicios.style.display === "none";
           tr.setAttribute("aria-expanded", String(abierto));
-          tdServicios.innerHTML = c.servicios && c.servicios.length
-            ? c.servicios.map(s => `<span class="chip">${s}</span>`).join("")
-            : "<em>No hay servicios registrados</em>";
+          tdServicios.innerHTML = c.servicios && c.servicios.length ? c.servicios.map(s => `<span class="chip">${s}</span>`).join("") : "<em>No hay servicios registrados</em>";
           trServicios.style.display = abierto ? "table-row" : "none";
           if (abierto){ map.flyTo([c.coord[0], c.coord[1]], 15, { duration: 0.6 }); const m = markers[idx]; if (m) m.openPopup(); }
         };
-
-        tr.addEventListener("click", toggleServicios);
+        tr.addEventListener("click", () => {
+          // clear previous selection highlight
+          document.querySelectorAll('#tablaCuerpo tr.selected').forEach(el=>el.classList.remove('selected'));
+          tr.classList.add('selected');
+          toggleServicios();
+        });
         tr.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleServicios(); } });
-
         tbody.appendChild(tr); tbody.appendChild(trServicios);
       });
     }
-
     function unique(arr) { return [...new Set(arr)]; }
-
     function fillProvincias() {
       const sel = document.getElementById("provincia");
-      unique(centros.map(c => c.provincia)).sort().forEach(p => {
-        const o = document.createElement("option"); o.value=p; o.textContent=p; sel.appendChild(o);
-      });
+      unique(centros.map(c => c.provincia)).sort().forEach(p => { const o = document.createElement("option"); o.value=p; o.textContent=p; sel.appendChild(o); });
     }
-
     function filtrarTabla() {
       const provinciaFiltro = document.getElementById("provincia").value.toLowerCase();
       const busqueda = document.getElementById("busqueda").value.toLowerCase();
@@ -253,22 +186,28 @@
         return pOK && tOK;
       });
       renderTabla(filtrados); renderMarkers(filtrados);
-      if (filtrados.length) {
-        const b = L.latLngBounds(filtrados.map(c => [c.coord[0], c.coord[1]])); map.fitBounds(b, { padding: [28,28] });
-      } else { map.setView([-1.8312, -78.1834], 6); }
+      // If selected center is in current list, auto-open its services row
+      if (selectedId) {
+        const rows = Array.from(document.querySelectorAll('#tablaCuerpo tr'));
+        for (let i=0; i<rows.length; i+=2){
+          const nameCell = rows[i].querySelector('td');
+          if (nameCell && nameCell.textContent === selectedId){
+            rows[i].classList.add('selected');
+            rows[i].setAttribute('aria-expanded', 'true');
+            if (rows[i+1]) rows[i+1].style.display = 'table-row';
+            break;
+          }
+        }
+      }
+      if (filtrados.length) { const b = L.latLngBounds(filtrados.map(c => [c.coord[0], c.coord[1]])); map.fitBounds(b, { padding: [28,28] }); } else { map.setView([-1.8312, -78.1834], 6); }
     }
-
     function showBanner(msg){ const b=document.getElementById("banner"); b.textContent=msg; b.classList.add("show"); setTimeout(()=>b.classList.remove("show"), 5000); }
-
     function updateUserLayer(lat, lng, acc){
-      userLayer.clearLayers();
-      const icon = L.divIcon({ className: "loc-pulse" });
+      userLayer.clearLayers(); const icon = L.divIcon({ className: "loc-pulse" });
       const marker = L.marker([lat, lng], { icon });
       const circle = L.circle([lat, lng], { radius: acc, color: "#2563eb", fillColor: "#93c5fd", fillOpacity: 0.25, weight: 1 });
-      userLayer.addLayer(circle);
-      userLayer.addLayer(marker);
+      userLayer.addLayer(circle); userLayer.addLayer(marker);
     }
-
     function startGeolocation(){
       if(!navigator.geolocation){ showBanner('Tu navegador no soporta geolocalización.'); return; }
       navigator.geolocation.getCurrentPosition((pos)=>{
@@ -285,12 +224,10 @@
 
     function setSheet(open){
       const sidePanel = document.getElementById('sidePanel');
-      const backdrop = document.getElementById('backdrop');
       sidePanel.classList.toggle('visible', open);
       document.body.classList.toggle('sidePanelOpen', open);
       document.body.classList.toggle('no-scroll', open && window.innerWidth <= 768);
       document.getElementById('toggleBtn').setAttribute('aria-expanded', String(open));
-      if (window.innerWidth <= 768){ backdrop.classList.toggle('show', open); }
       setTimeout(() => map && map.invalidateSize(), 320);
     }
 
@@ -315,14 +252,25 @@
 
         const toggleBtn = document.getElementById("toggleBtn");
         const sheetClose = document.getElementById("sheetClose");
-        const backdrop = document.getElementById("backdrop");
+        const sheetApply = document.getElementById("sheetApply");
 
         toggleBtn.addEventListener("click", () => setSheet(!document.getElementById('sidePanel').classList.contains('visible')));
         sheetClose.addEventListener("click", () => setSheet(false));
-        backdrop.addEventListener("click", () => setSheet(false));
+        sheetApply.addEventListener("click", () => {
+          setSheet(false);
+          filtrarTabla();
+          if (selectedId) {
+            // Find marker by title and focus it
+            const sel = centros.find(x => x.nombre === selectedId);
+            if (sel && map) {
+              map.flyTo([sel.coord[0], sel.coord[1]], 15, { duration: 0.6 });
+              const m = markers.find(mm => mm.options && mm.options.title === selectedId);
+              if (m) { m.openPopup(); }
+            }
+          }
+        });
 
         document.getElementById("myLocBtn").addEventListener("click", () => { startGeolocation(); });
-
       } catch (e) {
         console.error("Error al iniciar la app:", e);
         alert("Ocurrió un error al cargar los datos del mapa (revisa la Consola para detalles).");
